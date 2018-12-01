@@ -91,3 +91,66 @@ wages
 # Update this to something more informative.
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
+
+---
+
+## Ex 1.2: Summary of Independent Variables
+
+```yaml
+type: NormalExercise
+key: cc42003163
+xp: 100
+```
+
+In order to learn about the different variables in our dataset, we are going to 
+
+- calculate summary statistics and
+- plot distributions
+
+of the independent variables. Independent (right-hand-side, explanatory) variables are those we will use to explain the (left-hand-side, explained, dependent) variable.
+
+For starters, we will analyze the explanatory variables
+
+- gender
+- work experience (i.e. number of years the person has been working)
+- education, in terms of number of years of schooling
+
+The latter two variables will be visualized in dependence of the gender.
+
+`@instructions`
+- blablablalallalla
+- blablablalallalla
+- blablablalallalla
+- blablablalallalla
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+wages %>% summarise_all(funs(length(unique(.))))
+wages %>% ggplot(aes(x = male)) + geom_bar()
+
+wages %>% ggplot(aes(x = exper, fill = as.factor(male))) + geom_bar(position = "dodge")
+wages %>% group_by(male) %>% summarise(exper = mean(exper))
+
+wages %>% ggplot(aes(x = school, fill = as.factor(male))) + geom_bar(position = "dodge")
+wages %>% group_by(male) %>% summarise(school = mean(school))
+```
+
+```
+
+`@sct`
+```{r}
+
+```
