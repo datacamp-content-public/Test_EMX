@@ -1,9 +1,9 @@
 ---
-title: 'Introduction to Recursive Calculations'
-description: 'This is a template chapter.'
+title: 'Econometrics: Wage gap'
+description: 'This chapter deals with estimating the gender pay gap. '
 ---
 
-## Ex 1.1
+## Ex 1.1: Introducing the data set
 
 ```yaml
 type: NormalExercise
@@ -13,8 +13,12 @@ xp: 100
 skills: 1
 ```
 
-This is the assignment text. It should help provide students with the background information needed.
-The instructions that follow should be in bullet point form with clear guidance for what is expected.
+The goal of this exercise is to
+
+- load the dataset and tidy it
+- get an overview of the variables in the dataset
+- print summary statistics
+- plot the distribution 
 
 `@instructions`
 - Instruction 1
@@ -56,3 +60,16 @@ The instructions that follow should be in bullet point form with clear guidance 
 # Update this to something more informative.
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: VideoExercise
+key: b1e3055583
+xp: 50
+```
+
+`@projector_key`
+c8de6b3084beec2c4e24041a02e08d88
