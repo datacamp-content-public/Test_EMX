@@ -30,14 +30,17 @@ The goal of this exercise is to
 
 - load the dataset and tidy it
 - get an overview of the variables in the dataset
-- print summary statistics
-- plot the distribution 
+
+The WAGES1 file contains 3294 USA working individuals with the following information for 1987. The data are taken from the National Longitudinal Survey (from the companion website to Verbeek).
+
+
+
 
 `@instructions`
-- Instruction 1
-- Instruction 2
-- Instruction 3
-- Instruction 4
+- Attach the **tidyverse** packages 
+- Use the `read_tsv()` function from the **readr** package. 
+- Use **mutate()** to create the logarithms of wages
+- Create a factor for **gender**
 
 `@hint`
 - Here is the hint for this setup problem. It should get students 50% of the way to the correct answer.
@@ -49,23 +52,38 @@ The goal of this exercise is to
 
 `@sample_code`
 ```{r}
-# Your
-# sample
-# code
-# should
-# be
-# ideally
-# 10 lines or less,
-# with a max
-# of 16 lines.
+# Attach the tidyverse packages
+library(tidyverse)
+
+# Loading data with "read_tsv"
+wages <- read____("___") %>% as_tibble()
+wages
+
+# Add a new variable "log_wage" by transforming wage with the log() function
+wages <- wages %>% ___(log_wage = ___(___)) 
+wages
+
+# Transfrom the variable "gender" to a factor
+wages <- wages %>% ___(gender = ifelse(male == 1, "male", "female")) %>% mutate(gender = ___(gender))
+wages
 ```
 
 `@solution`
 ```{r}
-# Answer goes here
-# Make sure to match the comments with your sample code
-# to help students see the differences from solution
-# to given.
+# Attach the tidyverse packages
+library(tidyverse)
+
+# Loading data with "read_tsv"
+wages <- read_tsv("../local-data/wages1.dat") %>% as_tibble()
+wages
+
+# Add a new variable "log_wage" by transforming wage with the log() function
+wages <- wages %>% mutate(log_wage = log(wage)) 
+wages
+
+# Transfrom the variable "gender" to a factor
+wages <- wages %>% mutate(gender = ifelse(male == 1, "male", "female")) %>% mutate(gender = factor(gender))
+wages
 ```
 
 `@sct`
