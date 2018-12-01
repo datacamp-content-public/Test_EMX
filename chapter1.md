@@ -63,7 +63,7 @@ success_msg("Some praise! Then reinforce a learning objective from the exercise.
 
 ---
 
-## Insert exercise title here
+## Analyzing the Gender Pay Gap
 
 ```yaml
 type: VideoExercise
