@@ -3,6 +3,19 @@ title: 'Econometrics: Wage gap'
 description: 'This chapter deals with estimating the gender pay gap. '
 ---
 
+## Analyzing the Gender Pay Gap
+
+```yaml
+type: VideoExercise
+key: b1e3055583
+xp: 50
+```
+
+`@projector_key`
+c8de6b3084beec2c4e24041a02e08d88
+
+---
+
 ## Ex 1.1: Introducing the data set
 
 ```yaml
@@ -60,16 +73,3 @@ The goal of this exercise is to
 # Update this to something more informative.
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
-
----
-
-## Analyzing the Gender Pay Gap
-
-```yaml
-type: VideoExercise
-key: b1e3055583
-xp: 50
-```
-
-`@projector_key`
-c8de6b3084beec2c4e24041a02e08d88
